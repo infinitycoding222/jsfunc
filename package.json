@@ -1,12 +1,29 @@
 {
   "name": "usefuljsfunc",
-  "version": "1.1.2",
-  "description": "Provides useful Javascript functions",
+  "version": "1.4.0-beta",
+  "description": "Provides useful Javascript / Discord bot functions",
   "main": "index.js",
-  "keywords": ["js", "functions", "useful"],
+  "keywords": [
+    "js",
+    "functions",
+    "useful",
+    "discord.js",
+    "discord.js bot",
+    "discord",
+    "discord bot",
+    "bot"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "node-fetch": "2.6.1"
+  },
   "author": "Th3Reaper",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://useful-js-functions"
+  }
 }

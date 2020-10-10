@@ -26,13 +26,49 @@ module.exports = {
                 timestamp: new Date()
             }
         };
-
-        return Data;
+        return Data.embed;
     },
     Reverse: function (str) {
-        var spstr = str.split(" ")
-        var reversearr = spstr.reverse()
-        var ret = reversearr.join(" ")
-        return ret;
+        if (!str) throw Error(`Missing arguments`)
+        str.join(' ').split('').reverse().join('')
+        return str;
+    },
+    MC: function (String) {
+        if (!String) return Error("Please Give Something As Data!");
+        if (String.length > 15) return Error("String Length Limit - 15");
+
+        let Link = `https://api.alexflipnote.dev/achievement?text=${String}`;
+
+        let Data = {
+            embed: {
+                color: "RANDOM",
+                image: {
+                    url: Link
+                },
+                timestamp: new Date()
+            }
+        };
+        return Data.embed;
+    },
+    capitalise: function (str) {
+        if (!str) throw TypeError(`Missing 1 argument`)
+        str.charAt(0).toUpperCase() + str.slice(1);
+        return str;
+    },
+    date: function () {
+        var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        var date = new Date(),
+            year = date.getFullYear(),
+            month = months[date.getMonth()],
+            day = days[date.getDay()],
+            time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        return {
+            date,
+            year,
+            month,
+            day,
+            time
+        }
     }
 }
